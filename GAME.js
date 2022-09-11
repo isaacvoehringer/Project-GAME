@@ -159,7 +159,10 @@ function sleep(time){
 
 
 const player = newPlayableCharacter(200, 300)
-const def1 = newNonPlayableCharacter(400, 400)
+const def1 = newNonPlayableCharacter(400, 500)
+const def2 = newNonPlayableCharacter(400, 400)
+const def3 = newNonPlayableCharacter(400, 300)
+const def4 = newNonPlayableCharacter(400, 200)
 
 // let touchdown = document.querySelector(".endzone")
 
@@ -168,8 +171,18 @@ const def1 = newNonPlayableCharacter(400, 400)
 // var el
 
 $(document).ready(function() {
-    var el = $("#el").position();
+    var el = $("#endzone").position();
     var	x = el.left;
     var	y = el.top;
-    $("#el").append("("+ x + " , " + y + ")");				
+    $("#endzone").append("("+ x + " , " + y + ")");	
+    console.log('position')			
 });
+$(document).ready(function() {
+    var el2 = $("player").position();
+    var	f = el.left;
+    var	g = el.top;
+    $("player").append("("+ f + " , " + g + ")");
+    console.log(position)				
+});
+
+
