@@ -161,6 +161,15 @@ function sleep(time){
 const player = newPlayableCharacter(200, 300)
 const def1 = newNonPlayableCharacter(400, 400)
 
-let touchdown = document.querySelector(".endzone")
+// let touchdown = document.querySelector(".endzone")
 
-touchdown.addEventListener()
+// touchdown.addEventListener()
+
+// var el
+
+$(document).ready(function() {
+    var el = $("#el").position();
+    var	x = el.left;
+    var	y = el.top;
+    $("#el").append("("+ x + " , " + y + ")");				
+});
