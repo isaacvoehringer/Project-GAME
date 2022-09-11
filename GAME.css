@@ -20,13 +20,13 @@ body {
 
     height: 70vh;
     width: 100px;
-    background-color: red;
+    background-image: url(./assets/dawgpound.png);
 }
 .endzone{
    
     height: 70vh;
     width: 100px;
-    background-color: red;
+    background-image: url(./assets/dawgpound.png);
    
 
 }
