@@ -5,3 +5,10 @@ It's 4th and Goal in the Super Bowl with 1 second left... The Browns are down by
 i will make a playing field in a portion of the screen and place the players on the field. i will need to make boundaries for the sidelines and the goalline and reactions to the user crossing the lines
 
 set up field and initail styling and image  now i need to allow arrow key functionality
+
+9/11 class:
+
+allowed user control of player with direction arrows,
+added styling of endzones and borders,
+added non-playable characters,
+working to detect player crossing goalline

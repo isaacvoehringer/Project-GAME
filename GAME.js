@@ -236,9 +236,9 @@ const def2 = newNonPlayableCharacter(400, 400)
 const def3 = newNonPlayableCharacter(400, 300)
 const def4 = newNonPlayableCharacter(400, 200)
 
-const blocker1 = newNonPlayableOffense(200, 500)
-const blocker2 = newNonPlayableOffense(200, 400)
-const blocker3 = newNonPlayableOffense(200, 200)
+const blocker1 = newNonPlayableOffense(250, 500)
+const blocker2 = newNonPlayableOffense(250, 400)
+const blocker3 = newNonPlayableOffense(250, 200)
 // let touchdown = document.querySelector(".endzone")
 
 // touchdown.addEventListener()
@@ -276,3 +276,8 @@ async function movedef1(){
 }
 
 movedef1()
+
+function HitTest(Rectangle r1, Rectangle r2) returns boolean
+{
+    return ((r1.X + r1.Width >= r2.X) and (r1.X <= r2.X + r2.Width) and (r1.Y + r1.Height >= r2.Y) and (r1.Y <= r2.Y + r2.Height));
+}

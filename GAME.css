@@ -8,7 +8,7 @@ body {
     flex-wrap: nowrap;
     
     justify-content: space-between;
-    height: 70vh;
+    height: 500px;
     /* background-color:#60b922; */
 
     border-top: 15px solid white;
@@ -18,13 +18,13 @@ body {
 }
 .oppEndzone {
 
-    height: 70vh;
+    height: 500px;
     width: 100px;
     background-image: url(./assets/dawgpound.png);
 }
 .endzone{
    
-    height: 70vh;
+    height: 500px;
     width: 100px;
     background-image: url(./assets/dawgpound.png);
    
