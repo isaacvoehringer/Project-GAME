@@ -3,13 +3,31 @@ body {
 }
 
 .field {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    justify-content: space-between;
     height: 70vh;
     /* background-color:#60b922; */
-    border: 5px solid white;
+
+    border-top: 15px solid white;
+    border-bottom: 15px solid white;
     background: repeating-linear-gradient( 90deg, rgb(10, 128, 26), rgb(35, 228, 25) 40px, rgb(86, 214, 54) 40px, rgb(163, 230, 157) 80px);
     ;
 }
+.oppEndzone {
 
-img {
-height: 75px;
+    height: 70vh;
+    width: 100px;
+    background-color: red;
 }
+.endzone{
+   
+    height: 70vh;
+    width: 100px;
+    background-color: red;
+   
+
+}
+img {height: 75px;}
