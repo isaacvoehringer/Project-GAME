@@ -2,6 +2,11 @@
 function move(element) {
     element.style.position = 'fixed'
 
+    function updateRectCoor(){
+        var playerRect = player1.getBoundingClientRect();
+console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
+if (playerRect.left > 680) {touchdown()}
+    }
     function moveToCoordinates(left, bottom) {
         element.style.left = left + 'px'
         element.style.bottom = bottom + 'px'
@@ -17,16 +22,24 @@ function move(element) {
         
         function moveCharacter(){ 
             if(direction === 'west'){
-                x-=1
+                x-=1;
+                updateRectCoor();
+              
             }
             if(direction === 'north'){
-                y+=1
+                y+=1;
+                updateRectCoor();
+               
             }
             if(direction === 'east'){
-                x+=1
+                x+=1;
+                updateRectCoor();
+               
             }
             if(direction === 'south'){
-                y-=1
+                y-=1;
+                updateRectCoor();
+               
             }
             element.style.left = x + 'px'
             element.style.bottom = y + 'px'
@@ -67,6 +80,7 @@ function move(element) {
 function newPlayableCharacter(x, y) {
     const element = newImage('./assets/brownietheelf.jpeg')
     element.style.zIndex = 1;
+    element.id = 'player';
 
  
 
@@ -245,26 +259,40 @@ const blocker3 = newNonPlayableOffense(250, 200)
 
 // var el
 
-$(document).ready(function() {
-    var el = $("#endzone").position();
-    var	x = el.left;
-    var	y = el.top;
-    $("#endzone").append("("+ x + " , " + y + ")");	
-    console.log('position')			
-});
-$(document).ready(function() {
-    var el2 = $("player").position();
-    var	f = el.left;
-    var	g = el.top;
-    $("player").append("("+ f + " , " + g + ")");
-    console.log(position)				
-});
+// $(document).ready(function() {
+//     var el = $("#endzone").position();
+//     var	x = el.left;
+//     var	y = el.top;
+//     $("#endzone").append("("+ x + " , " + y + ")");	
+//     console.log('position')	
+//     return x		
+// });
+// $(document).ready(function() {
+//     var el2 = $("player").position();
+//     var	f = el.left;
+//     var	g = el.top;
+//     $("player").append("("+ f + " , " + g + ")");
+//     console.log(position)
+//     return f				
+// });
 
-// let touchdown(){
-//     if x === f {console.log('touchdown')}
-// }
+function touchdown(){
+    document.createElement
+   {console.log('touchdown')}
+}
 
+let endzone = document.getElementById('endzone')
 
+var rect = endzone.getBoundingClientRect();
+console.log(rect.top, rect.right, rect.bottom, rect.left);
+let player1 = document.getElementById('player')
+
+var playerRect = player1.getBoundingClientRect();
+console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
+
+touchdown()
+// console.log(playerRect.left)
+console.log(player)
 async function movedef1(){
     await def1.walkEast(300)
     await def1.walkSouth(600)
@@ -277,7 +305,7 @@ async function movedef1(){
 
 movedef1()
 
-function HitTest(Rectangle r1, Rectangle r2) returns boolean
-{
-    return ((r1.X + r1.Width >= r2.X) and (r1.X <= r2.X + r2.Width) and (r1.Y + r1.Height >= r2.Y) and (r1.Y <= r2.Y + r2.Height));
-}
+// function HitTest(Rectangle r1, Rectangle r2) returns boolean
+// {
+//     return ((r1.X + r1.Width >= r2.X) and (r1.X <= r2.X + r2.Width) and (r1.Y + r1.Height >= r2.Y) and (r1.Y <= r2.Y + r2.Height));
+// }
