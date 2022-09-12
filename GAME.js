@@ -280,7 +280,7 @@ function touchdown(){
 //    var celebration = document.createElement(<p>THE BROWNS WIN THE SUPER BOWL!!!</p>);
 //    document.append('celebration') 
 // document.getElementsByTagName('div').style.visibility = "hidden";
-document.body.style = 'hidden' 
+document.createElement("h1")
    console.log('touchdown')
 }
 
