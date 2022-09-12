@@ -245,14 +245,14 @@ function sleep(time){
 
 
 const player = newPlayableCharacter(200, 300)
-const def1 = newNonPlayableCharacter(400, 500)
-const def2 = newNonPlayableCharacter(400, 400)
-const def3 = newNonPlayableCharacter(400, 300)
-const def4 = newNonPlayableCharacter(400, 200)
+const def1 = newNonPlayableCharacter(328, 500)
+const def2 = newNonPlayableCharacter(328, 400)
+const def3 = newNonPlayableCharacter(328, 300)
+const def4 = newNonPlayableCharacter(328, 200)
 
 const blocker1 = newNonPlayableOffense(250, 500)
 const blocker2 = newNonPlayableOffense(250, 400)
-const blocker3 = newNonPlayableOffense(250, 200)
+const blocker3 = newNonPlayableOffense(250, 250)
 // let touchdown = document.querySelector(".endzone")
 
 // touchdown.addEventListener()
@@ -295,44 +295,38 @@ touchdown()
 console.log(player)
 
 async function movedef1(){
-    await def1.walkWest(200)
-    await def1.walkEast(600)
+
+    await def1.walkEast(800)
     await def1.walkNorth(200)
-    await def1.walkSouth(100)
     await def1.walkSouth(200)
-    await def1.walkNorth(100)
-    await def1.walkWest(600)
+    await def1.walkWest(800)
     await movedef1()
 }
 movedef1()
 
 async function movedef2(){
-    await def2.walkEast(600)
+    await def2.walkEast(800)
     await def2.walkNorth(200)
-    await def2.walkSouth(100)
     await def2.walkSouth(200)
-    await def2.walkNorth(100)
-    await def2.walkWest(600)
+    await def2.walkWest(800)
     await movedef2()
 }
 movedef2()
 
 async function movedef3(){
-    await def3.walkEast(600)
+    await def3.walkEast(800)
     await def3.walkSouth(200)
-    await def3.walkNorth(100)
     await def3.walkNorth(200)
-    await def3.walkSouth(100)
-    await def3.walkWest(600)
+    await def3.walkWest(800)
     await movedef3()
 }
 movedef3()
 
 async function movedef4(){
-    await def4.walkEast(600)
+    await def4.walkEast(800)
     await def4.walkSouth(200)
     await def4.walkNorth(200)
-    await def4.walkWest(600)
+    await def4.walkWest(800)
     await movedef4()
 }
 movedef4()
@@ -346,7 +340,23 @@ async function moveblocker1(){
 }
 moveblocker1()
 
+async function moveblocker2(){
+    await blocker2.walkEast(800)
+    await blocker2.walkNorth(200)
+    await blocker2.walkSouth(200)
+    await blocker2.walkWest(800)
+    await moveblocker2()
+}
+moveblocker2()
 
+async function moveblocker3(){
+    await blocker3.walkEast(800)
+    await blocker3.walkSouth(200)
+    await blocker3.walkNorth(200)
+    await blocker3.walkWest(800)
+    await moveblocker3()
+}
+moveblocker3()
 // function HitTest(Rectangle r1, Rectangle r2) returns boolean
 // {
 //     return ((r1.X + r1.Width >= r2.X) and (r1.X <= r2.X + r2.Width) and (r1.Y + r1.Height >= r2.Y) and (r1.Y <= r2.Y + r2.Height));
