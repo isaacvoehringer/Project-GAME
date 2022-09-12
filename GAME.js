@@ -197,35 +197,35 @@ function newNonPlayableOffense(x, y) {
 
     async function walkEast(time) {
         direction = 'east'
-        element.src = './assets/defender.jpeg'
+        // element.src = './assets/defender.jpeg'
         await sleep(time)
         stop()
     }
 
     async function walkNorth(time) {
         direction = 'north'
-        element.src = './assets/defender.jpeg'
+        // element.src = './assets/defender.jpeg'
         await sleep(time)
         stop()
     }
 
     async function walkWest(time) {
         direction = 'west'
-        element.src = './assets/defender.jpeg'
+        // element.src = './assets/defender.jpeg'
         await sleep(time)
         stop()
     }
 
     async function walkSouth(time) {
         direction = 'south'
-        element.src = './assets/defender.jpeg'
+        // element.src = './assets/defender.jpeg'
         await sleep(time)
         stop()
     }
 
     function stop() {
         direction = null
-        element.src = './assets/defender.jpeg'
+        // element.src = './assets/defender.jpeg'
     }
 
     return {
@@ -277,8 +277,8 @@ const blocker3 = newNonPlayableOffense(250, 200)
 // });
 
 function touchdown(){
-    document.createElement
-   {console.log('touchdown')}
+    
+   console.log('touchdown')
 }
 
 let endzone = document.getElementById('endzone')
@@ -293,17 +293,52 @@ console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left
 touchdown()
 // console.log(playerRect.left)
 console.log(player)
+
 async function movedef1(){
-    await def1.walkEast(300)
-    await def1.walkSouth(600)
-    await def1.walkEast(200)
+    await def1.walkEast(600)
+    await def1.walkNorth(200)
     await def1.walkSouth(200)
-    await def1.walkWest(700)
-    await def1.walkNorth(800)
+    await def1.walkWest(600)
     await movedef1()
 }
-
 movedef1()
+
+async function movedef2(){
+    await def2.walkEast(600)
+    await def2.walkNorth(200)
+    await def2.walkSouth(200)
+    await def2.walkWest(600)
+    await movedef2()
+}
+movedef2()
+
+async function movedef3(){
+    await def3.walkEast(600)
+    await def3.walkSouth(200)
+    await def3.walkNorth(200)
+    await def3.walkWest(600)
+    await movedef3()
+}
+movedef3()
+
+async function movedef4(){
+    await def4.walkEast(600)
+    await def4.walkSouth(200)
+    await def4.walkNorth(200)
+    await def4.walkWest(600)
+    await movedef4()
+}
+movedef4()
+
+async function moveblocker1(){
+    await blocker1.walkEast(600)
+    await blocker1.walkSouth(200)
+    await blocker1.walkNorth(200)
+    await blocker1.walkWest(600)
+    await moveblocker1()
+}
+moveblocker1()
+
 
 // function HitTest(Rectangle r1, Rectangle r2) returns boolean
 // {
