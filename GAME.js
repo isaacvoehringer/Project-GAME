@@ -295,9 +295,12 @@ touchdown()
 console.log(player)
 
 async function movedef1(){
+    await def1.walkWest(200)
     await def1.walkEast(600)
     await def1.walkNorth(200)
+    await def1.walkSouth(100)
     await def1.walkSouth(200)
+    await def1.walkNorth(100)
     await def1.walkWest(600)
     await movedef1()
 }
@@ -306,7 +309,9 @@ movedef1()
 async function movedef2(){
     await def2.walkEast(600)
     await def2.walkNorth(200)
+    await def2.walkSouth(100)
     await def2.walkSouth(200)
+    await def2.walkNorth(100)
     await def2.walkWest(600)
     await movedef2()
 }
@@ -315,7 +320,9 @@ movedef2()
 async function movedef3(){
     await def3.walkEast(600)
     await def3.walkSouth(200)
+    await def3.walkNorth(100)
     await def3.walkNorth(200)
+    await def3.walkSouth(100)
     await def3.walkWest(600)
     await movedef3()
 }
@@ -331,10 +338,10 @@ async function movedef4(){
 movedef4()
 
 async function moveblocker1(){
-    await blocker1.walkEast(600)
-    await blocker1.walkSouth(200)
+    await blocker1.walkEast(800)
     await blocker1.walkNorth(200)
-    await blocker1.walkWest(600)
+    await blocker1.walkSouth(200)
+    await blocker1.walkWest(800)
     await moveblocker1()
 }
 moveblocker1()
