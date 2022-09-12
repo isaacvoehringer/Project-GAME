@@ -277,7 +277,8 @@ const blocker3 = newNonPlayableOffense(250, 250)
 // });
 
 function touchdown(){
-    
+   let celebration = document.createElement(<p>THE BROWNS WIN THE SUPER BOWL!!!</p>);
+   document.append(celebration) 
    console.log('touchdown')
 }
 
