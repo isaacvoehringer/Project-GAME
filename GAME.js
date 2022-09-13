@@ -1,6 +1,6 @@
 // console.log('hi')
 function move(element) {
-    element.style.position = 'fixed'
+    element.style.position = 'absolute'
 
     function updateRectCoor(){
         var playerRect = player1.getBoundingClientRect();
@@ -248,14 +248,14 @@ function sleep(time){
 
 
 const player = newPlayableCharacter(200, 300)
-const def1 = newNonPlayableCharacter(328, 400)
-const def2 = newNonPlayableCharacter(328, 300)
-const def3 = newNonPlayableCharacter(328, 200)
-const def4 = newNonPlayableCharacter(328, 100)
+const def1 = newNonPlayableCharacter(328, 500)
+const def2 = newNonPlayableCharacter(328, 400)
+const def3 = newNonPlayableCharacter(328, 300)
+const def4 = newNonPlayableCharacter(328, 200)
 
-const blocker1 = newNonPlayableOffense(250, 400)
-const blocker2 = newNonPlayableOffense(250, 300)
-const blocker3 = newNonPlayableOffense(250, 150)
+const blocker1 = newNonPlayableOffense(250, 500)
+const blocker2 = newNonPlayableOffense(250, 400)
+const blocker3 = newNonPlayableOffense(250, 250)
 // let touchdown = document.querySelector(".endzone")
 
 // touchdown.addEventListener()
@@ -380,3 +380,9 @@ moveblocker3()
 // {
 //     return ((r1.X + r1.Width >= r2.X) and (r1.X <= r2.X + r2.Width) and (r1.Y + r1.Height >= r2.Y) and (r1.Y <= r2.Y + r2.Height));
 // }
+function reset()
+let btn = document.getElementById('reset') {
+    btn.onclick {
+        console.log(reset)
+    }
+}
