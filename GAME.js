@@ -275,12 +275,17 @@ const blocker3 = newNonPlayableOffense(250, 250)
 //     console.log(position)
 //     return f				
 // });
-
+function showImage() {
+    var img = document.getElementById('win');
+    img.style.visibility = 'visible';
+}
 function touchdown(){
 //    var celebration = document.createElement(<p>THE BROWNS WIN THE SUPER BOWL!!!</p>);
 //    document.append('celebration') 
 // document.getElementsByTagName('div').style.visibility = "hidden";
-document.createElement("h1")
+// document.createElement("h1")
+// element.body.createElement('p');
+
    console.log('touchdown')
 }
 
