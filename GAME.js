@@ -7,6 +7,7 @@ function move(element) {
 console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
 if (playerRect.left > 680) {touchdown()}
 if (playerRect.left < 44) {saftey()}
+if (playerRect.top > 450 || playerRect.top < 20){outOfBounds()}
     }
     function moveToCoordinates(left, bottom) {
         element.style.left = left + 'px'
@@ -245,15 +246,15 @@ function sleep(time){
 }
 
 
-const player = newPlayableCharacter(200, 300)
-const def1 = newNonPlayableCharacter(328, 500)
-const def2 = newNonPlayableCharacter(328, 400)
-const def3 = newNonPlayableCharacter(328, 300)
-const def4 = newNonPlayableCharacter(328, 200)
+const player = newPlayableCharacter(200, 100)
+const def1 = newNonPlayableCharacter(328, 400)
+const def2 = newNonPlayableCharacter(328, 300)
+const def3 = newNonPlayableCharacter(328, 200)
+const def4 = newNonPlayableCharacter(328, 100)
 
-const blocker1 = newNonPlayableOffense(250, 500)
-const blocker2 = newNonPlayableOffense(250, 400)
-const blocker3 = newNonPlayableOffense(250, 250)
+const blocker1 = newNonPlayableOffense(250, 400)
+const blocker2 = newNonPlayableOffense(250, 300)
+const blocker3 = newNonPlayableOffense(250, 150)
 // let touchdown = document.querySelector(".endzone")
 
 // touchdown.addEventListener()
@@ -294,7 +295,8 @@ function saftey(){
     }
 
 function outOfBounds(){
-    console.log('out')
+    var img = document.getElementById('out');
+    img.style.visibility = 'visible';
 }
 
 let endzone = document.getElementById('endzone')

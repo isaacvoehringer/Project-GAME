@@ -64,3 +64,15 @@ img {height: 75px;}
     top: 0;
     z-index: 3;
 }
+
+.out {
+   height: 1000px;
+    width: 1000px;
+    background-image: url(./assets/whatNC.jpeg);
+    color: white;
+    font-size: xx-large;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 3;  
+}
