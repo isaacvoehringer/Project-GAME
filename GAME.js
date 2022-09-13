@@ -5,7 +5,8 @@ function move(element) {
     function updateRectCoor(){
         var playerRect = player1.getBoundingClientRect();
 console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
-if (playerRect.left > 680) {touchdown(); showImage()}
+if (playerRect.left > 680) {touchdown()}
+if (playerRect.left < 44) {saftey()}
     }
     function moveToCoordinates(left, bottom) {
         element.style.left = left + 'px'
@@ -275,18 +276,25 @@ const blocker3 = newNonPlayableOffense(250, 250)
 //     console.log(position)
 //     return f				
 // });
-function showImage() {
-    var img = document.getElementById('win');
-    img.style.visibility = 'visible';
-}
+
 function touchdown(){
 //    var celebration = document.createElement(<p>THE BROWNS WIN THE SUPER BOWL!!!</p>);
 //    document.append('celebration') 
 // document.getElementsByTagName('div').style.visibility = "hidden";
 // document.createElement("h1")
 // element.body.createElement('p');
+var img = document.getElementById('win');
+    img.style.visibility = 'visible';
+//    console.log('touchdown')
+}
 
-   console.log('touchdown')
+function saftey(){
+    var img = document.getElementById('safety');
+    img.style.visibility = 'visible';
+    }
+
+function outOfBounds(){
+    console.log('out')
 }
 
 let endzone = document.getElementById('endzone')
@@ -298,9 +306,9 @@ let player1 = document.getElementById('player')
 var playerRect = player1.getBoundingClientRect();
 console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
 
-touchdown()
+// touchdown()
 // console.log(playerRect.left)
-console.log(player)
+// console.log(player)
 
 async function movedef1(){
 
