@@ -7,7 +7,7 @@ function move(element) {
 console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
 if (playerRect.left > 680) {touchdown()}
 if (playerRect.left < 44) {saftey()}
-if (playerRect.top > 450 || playerRect.top < 20){outOfBounds()}
+if (playerRect.top > 450 || playerRect.top < 175){outOfBounds()}
     }
     function moveToCoordinates(left, bottom) {
         element.style.left = left + 'px'
@@ -80,9 +80,10 @@ if (playerRect.top > 450 || playerRect.top < 20){outOfBounds()}
 }
 
 function newPlayableCharacter(x, y) {
-    const element = newImage('./assets/brownietheelf.jpeg')
+    let element = newImage('./assets/brownietheelf.jpeg')
     element.style.zIndex = 1;
     element.id = 'player';
+    
 
  
 
@@ -246,7 +247,7 @@ function sleep(time){
 }
 
 
-const player = newPlayableCharacter(200, 100)
+const player = newPlayableCharacter(200, 300)
 const def1 = newNonPlayableCharacter(328, 400)
 const def2 = newNonPlayableCharacter(328, 300)
 const def3 = newNonPlayableCharacter(328, 200)
