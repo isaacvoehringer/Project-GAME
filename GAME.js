@@ -5,7 +5,7 @@ function move(element) {
     function updateRectCoor(){
         var playerRect = player1.getBoundingClientRect();
 console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
-if (playerRect.left > 680) {touchdown()}
+if (playerRect.left > 680) {touchdown(); showImage()}
     }
     function moveToCoordinates(left, bottom) {
         element.style.left = left + 'px'
