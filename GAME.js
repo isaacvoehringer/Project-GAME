@@ -6,8 +6,8 @@ function move(element) {
         var playerRect = player1.getBoundingClientRect();
 console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
 if (playerRect.left > 680) {touchdown()}
-if (playerRect.left < 44) {saftey()}
-if (playerRect.top > 450 || playerRect.top < 175){outOfBounds()}
+if (playerRect.left < 1) {saftey()}
+if (playerRect.top > 1050 || playerRect.top < 75){outOfBounds()}
     }
     function moveToCoordinates(left, bottom) {
         element.style.left = left + 'px'
@@ -405,10 +405,15 @@ let btn = document.getElementById('reset');
     btn.addEventListener("click", function() {
   let img = document.getElementsByClassName('win')[0];
         img.style.visibility = 'hidden';
-
     let player1 = document.getElementById('player');
     player1.remove();
     newPlayableCharacter(200,300);
+        var playerRect = player1.getBoundingClientRect();
+console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
+if (playerRect.left > 680) {touchdown()}
+if (playerRect.left < 1) {saftey()}
+if (playerRect.top > 1050 || playerRect.top < 75){outOfBounds()}
+    
     
     // player1.style.bottom = '100px';
     // player1.style.left = '100px';
