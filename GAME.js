@@ -280,24 +280,43 @@ const blocker3 = newNonPlayableOffense(250, 250)
 // });
 
 function touchdown(){
-//    var celebration = document.createElement(<p>THE BROWNS WIN THE SUPER BOWL!!!</p>);
-//    document.append('celebration') 
-// document.getElementsByTagName('div').style.visibility = "hidden";
-// document.createElement("h1")
-// element.body.createElement('p');
-var img = document.getElementById('win');
+
+let img = document.getElementById('win');
     img.style.visibility = 'visible';
-//    console.log('touchdown')
+    let btn = document.getElementById('reset'); 
+    // btn.addEventListener("click", function(event) {
+    // event.preventDefault();
+    // img.style.visibility = 'hidden';
+
+    // let player1 = document.getElementById('player')
+    // player1.style.bottom = '100px';
+    // player1.style.left = '100px';
+
+
+
+    // })
+
 }
 
 function saftey(){
-    var img = document.getElementById('safety');
+    let img = document.getElementById('safety');
     img.style.visibility = 'visible';
-    }
+    // let btn = document.getElementById('safetybtn'); 
+    // btn.addEventListener("click", function() {
+    // img.style.visibility = 'hidden';    
+    //     console.log('reset')
+    // })
+
+}
 
 function outOfBounds(){
-    var img = document.getElementById('out');
+    let img = document.getElementById('out');
     img.style.visibility = 'visible';
+    let btn = document.getElementById('outbtn'); 
+    // btn.addEventListener("click", function() {
+    // img.style.visibility = 'hidden';    
+    //     console.log('reset')
+    // })
 }
 
 let endzone = document.getElementById('endzone')
@@ -383,5 +402,35 @@ moveblocker3()
 
 
 let btn = document.getElementById('reset'); 
-    btn.addEventListener("click", console.log(reset))
+    btn.addEventListener("click", function() {
+  let img = document.getElementsByClassName('win')[0];
+        img.style.visibility = 'hidden';
+
+    let player1 = document.getElementById('player');
+    player1.remove();
+    newPlayableCharacter(200,300);
     
+    // player1.style.bottom = '100px';
+    // player1.style.left = '100px';
+
+    })
+let safetybtn = document.getElementById('safetybtn'); 
+    safetybtn.addEventListener("click", function() {
+        let img = document.getElementsByClassName('safety')[0];
+       img.style.visibility = 'hidden';
+
+       let player1 = document.getElementById('player')
+       player1.remove();
+    newPlayableCharacter(200,300);
+    })
+ let outbtn = document.getElementById('outbtn'); 
+    outbtn.addEventListener("click", function() {
+        let img = document.getElementsByClassName('out')[0];
+       img.style.visibility = 'hidden';
+
+       let player1 = document.getElementById('player')
+       player1.remove();
+    newPlayableCharacter(200,300);
+    })
+    
+
