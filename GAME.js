@@ -2,7 +2,7 @@
 function move(element) {
     element.style.position = 'absolute'
 
-    function updateRectCoor(){
+function updateRectCoor(){
         var playerRect = player1.getBoundingClientRect();
 console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
 if (playerRect.left > 680) {touchdown()}
@@ -247,7 +247,7 @@ function sleep(time){
 }
 
 
-const player = newPlayableCharacter(200, 300)
+let player = newPlayableCharacter(200, 300)
 const def1 = newNonPlayableCharacter(328, 500)
 const def2 = newNonPlayableCharacter(328, 400)
 const def3 = newNonPlayableCharacter(328, 300)
@@ -284,6 +284,8 @@ function touchdown(){
 let img = document.getElementById('win');
     img.style.visibility = 'visible';
     let btn = document.getElementById('reset'); 
+    // player1.remove();
+    // newPlayableCharacter(200,300);
     // btn.addEventListener("click", function(event) {
     // event.preventDefault();
     // img.style.visibility = 'hidden';
@@ -319,14 +321,14 @@ function outOfBounds(){
     // })
 }
 
-let endzone = document.getElementById('endzone')
+// let endzone = document.getElementById('endzone')
 
-var rect = endzone.getBoundingClientRect();
-console.log(rect.top, rect.right, rect.bottom, rect.left);
+// var rect = endzone.getBoundingClientRect();
+// console.log(rect.top, rect.right, rect.bottom, rect.left);
 let player1 = document.getElementById('player')
 
-var playerRect = player1.getBoundingClientRect();
-console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
+// var playerRect = player1.getBoundingClientRect();
+// console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
 
 // touchdown()
 // console.log(playerRect.left)
@@ -403,39 +405,39 @@ moveblocker3()
 
 let btn = document.getElementById('reset'); 
     btn.addEventListener("click", function() {
-  let img = document.getElementsByClassName('win')[0];
-        img.style.visibility = 'hidden';
-    let player1 = document.getElementById('player');
-    player1.remove();
-    newPlayableCharacter(200,300);
-        var playerRect = player1.getBoundingClientRect();
-console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
-if (playerRect.left > 680) {touchdown()}
-if (playerRect.left < 1) {saftey()}
-if (playerRect.top > 1050 || playerRect.top < 75){outOfBounds()}
-    
-    
-    // player1.style.bottom = '100px';
-    // player1.style.left = '100px';
+        window.location.reload()
+//   let img = document.getElementsByClassName('win')[0];
+    //     img.style.visibility = 'hidden';
+    // let player1 = document.getElementById('player');
+    // player1.replaceWith(newPlayableCharacter(200,300));
+    ;
+   
 
-    })
+
+    
+
+    }
+    )
 let safetybtn = document.getElementById('safetybtn'); 
     safetybtn.addEventListener("click", function() {
-        let img = document.getElementsByClassName('safety')[0];
-       img.style.visibility = 'hidden';
+        window.location.reload()
+    //     let img = document.getElementsByClassName('safety')[0];
+    //    img.style.visibility = 'hidden';
 
-       let player1 = document.getElementById('player')
-       player1.remove();
-    newPlayableCharacter(200,300);
+    //    let player1 = document.getElementById('player')
+    //    player1.remove();
+    // newPlayableCharacter(200,300);
     })
- let outbtn = document.getElementById('outbtn'); 
+ 
+    let outbtn = document.getElementById('outbtn'); 
     outbtn.addEventListener("click", function() {
-        let img = document.getElementsByClassName('out')[0];
-       img.style.visibility = 'hidden';
+        window.location.reload()
+    //     let img = document.getElementsByClassName('out')[0];
+    //    img.style.visibility = 'hidden';
 
-       let player1 = document.getElementById('player')
-       player1.remove();
-    newPlayableCharacter(200,300);
+    //    let player1 = document.getElementById('player')
+    //    player1.remove();
+    // newPlayableCharacter(200,300);
     })
     
 
