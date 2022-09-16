@@ -11,4 +11,22 @@ set up field and initail styling and image  now i need to allow arrow key functi
 allowed user control of player with direction arrows,
 added styling of endzones and borders,
 added non-playable characters,
-working to detect player crossing goalline
+
+9-12
+working to detect player crossing goalline;
+
+player crossing boundaries solved with function that tracks the players coordinates and triggers win/lose events with those coordinates
+9-13 class
+reset button functionality created a problem with the coordinate tracking when reseting the player position, 
+9-14
+problem solved with window reload
+working to improve player position sensitivity
+
+9-15
+improved image styling
+
+9-16
+working on gameplay functionallity - prevent arrow keys from moving screen
+-improved boundaries
+-improved instructions
+

@@ -1,14 +1,16 @@
 // console.log('hi')
 function move(element) {
     element.style.position = 'absolute'
-
+    //track and react to player movement
+    let player1 = document.getElementById('player')
 function updateRectCoor(){
         var playerRect = player1.getBoundingClientRect();
 console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
 if (playerRect.left > 680) {touchdown()}
-if (playerRect.left < 1) {saftey()}
-if (playerRect.top > 1050 || playerRect.top < 75){outOfBounds()}
+if (playerRect.left < 95) {saftey()}
+if (playerRect.top > 636 || playerRect.top < 142){outOfBounds()}
     }
+    //posittioning and moving characters with tracking and react function attached to player
     function moveToCoordinates(left, bottom) {
         element.style.left = left + 'px'
         element.style.bottom = bottom + 'px'
@@ -48,7 +50,8 @@ if (playerRect.top > 1050 || playerRect.top < 75){outOfBounds()}
         }
         
         setInterval(moveCharacter, 1)
-        
+        // arrow key movement of player
+
         document.addEventListener('keydown', function(e){
             if(e.repeat) return;
         
@@ -64,12 +67,12 @@ if (playerRect.top > 1050 || playerRect.top < 75){outOfBounds()}
             if(e.key === 'ArrowDown'){
                 direction = 'south'
             }
-            // callback(direction)
+       
         })
         
         document.addEventListener('keyup', function(e){
             direction = null
-            // callback(direction)
+    
         })
     }
 
@@ -78,6 +81,8 @@ if (playerRect.top > 1050 || playerRect.top < 75){outOfBounds()}
         withArrowKeys: moveWithArrowKeys
     }
 }
+
+// functions to create and position characters
 
 function newPlayableCharacter(x, y) {
     let element = newImage('./assets/brownietheelf.jpeg')
@@ -105,7 +110,7 @@ function newNonPlayableCharacter(x, y) {
     element.style.zIndex = 1;
     
     let direction = null;
-
+// alllow automated player movement
     function moveCharacter() {
         if (direction === 'west') {
             x -= 1
@@ -200,35 +205,30 @@ function newNonPlayableOffense(x, y) {
 
     async function walkEast(time) {
         direction = 'east'
-        // element.src = './assets/defender.jpeg'
         await sleep(time)
         stop()
     }
 
     async function walkNorth(time) {
         direction = 'north'
-        // element.src = './assets/defender.jpeg'
         await sleep(time)
         stop()
     }
 
     async function walkWest(time) {
         direction = 'west'
-        // element.src = './assets/defender.jpeg'
         await sleep(time)
         stop()
     }
 
     async function walkSouth(time) {
         direction = 'south'
-        // element.src = './assets/defender.jpeg'
         await sleep(time)
         stop()
     }
 
     function stop() {
         direction = null
-        // element.src = './assets/defender.jpeg'
     }
 
     return {
@@ -246,6 +246,7 @@ function sleep(time){
     })  
 }
 
+//creating characters
 
 let player = newPlayableCharacter(200, 300)
 const def1 = newNonPlayableCharacter(328, 500)
@@ -256,83 +257,28 @@ const def4 = newNonPlayableCharacter(328, 200)
 const blocker1 = newNonPlayableOffense(250, 500)
 const blocker2 = newNonPlayableOffense(250, 400)
 const blocker3 = newNonPlayableOffense(250, 250)
-// let touchdown = document.querySelector(".endzone")
-
-// touchdown.addEventListener()
-
-// var el
-
-// $(document).ready(function() {
-//     var el = $("#endzone").position();
-//     var	x = el.left;
-//     var	y = el.top;
-//     $("#endzone").append("("+ x + " , " + y + ")");	
-//     console.log('position')	
-//     return x		
-// });
-// $(document).ready(function() {
-//     var el2 = $("player").position();
-//     var	f = el.left;
-//     var	g = el.top;
-//     $("player").append("("+ f + " , " + g + ")");
-//     console.log(position)
-//     return f				
-// });
 
 function touchdown(){
 
 let img = document.getElementById('win');
     img.style.visibility = 'visible';
     let btn = document.getElementById('reset'); 
-    // player1.remove();
-    // newPlayableCharacter(200,300);
-    // btn.addEventListener("click", function(event) {
-    // event.preventDefault();
-    // img.style.visibility = 'hidden';
-
-    // let player1 = document.getElementById('player')
-    // player1.style.bottom = '100px';
-    // player1.style.left = '100px';
-
-
-
-    // })
+   
 
 }
 
 function saftey(){
     let img = document.getElementById('safety');
     img.style.visibility = 'visible';
-    // let btn = document.getElementById('safetybtn'); 
-    // btn.addEventListener("click", function() {
-    // img.style.visibility = 'hidden';    
-    //     console.log('reset')
-    // })
-
 }
 
 function outOfBounds(){
     let img = document.getElementById('out');
     img.style.visibility = 'visible';
-    let btn = document.getElementById('outbtn'); 
-    // btn.addEventListener("click", function() {
-    // img.style.visibility = 'hidden';    
-    //     console.log('reset')
-    // })
 }
 
-// let endzone = document.getElementById('endzone')
 
-// var rect = endzone.getBoundingClientRect();
-// console.log(rect.top, rect.right, rect.bottom, rect.left);
-let player1 = document.getElementById('player')
 
-// var playerRect = player1.getBoundingClientRect();
-// console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
-
-// touchdown()
-// console.log(playerRect.left)
-// console.log(player)
 
 async function movedef1(){
 
@@ -440,4 +386,10 @@ let safetybtn = document.getElementById('safetybtn');
     // newPlayableCharacter(200,300);
     })
     
+// prevent arrow keys from scrolling the window which disrupts game play
 
+window.addEventListener("keydown", function(e) {
+    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+        e.preventDefault();
+    }
+}, false);
