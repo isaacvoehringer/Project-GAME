@@ -252,12 +252,12 @@ function sleep(time){
 let player = newPlayableCharacter(200, 300)
 const def1 = newNonPlayableCharacter(328, 500)
 const def2 = newNonPlayableCharacter(328, 400)
-const def3 = newNonPlayableCharacter(328, 300)
-const def4 = newNonPlayableCharacter(328, 200)
+const def3 = newNonPlayableCharacter(328, 250)
+const def4 = newNonPlayableCharacter(328, 150)
 
 const blocker1 = newNonPlayableOffense(250, 500)
 const blocker2 = newNonPlayableOffense(250, 400)
-const blocker3 = newNonPlayableOffense(250, 250)
+const blocker3 = newNonPlayableOffense(250, 200)
 
 function touchdown(){
 
