@@ -7,9 +7,9 @@ let player1 = document.getElementById('player')
 function updateRectCoor(){
         var playerRect = player1.getBoundingClientRect();
 console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
-if (playerRect.left > 680) {touchdown()}
-if (playerRect.left < 65) {saftey()}
-if (playerRect.top > 595 || playerRect.top < 100){outOfBounds()}
+if (playerRect.left > 1200) {touchdown()}
+if (playerRect.left < 123) {saftey()}
+if (playerRect.top > 695 || playerRect.top < 90){outOfBounds()}
     }
     //posittioning and moving characters with tracking and react function attached to player
     function moveToCoordinates(left, bottom) {
@@ -283,64 +283,64 @@ function outOfBounds(){
 
 async function movedef1(){
 
-    await def1.walkEast(800)
+    await def1.walkEast(2600)
     await def1.walkNorth(200)
     await def1.walkSouth(200)
-    await def1.walkWest(800)
+    await def1.walkWest(2600)
     await movedef1()
 }
 movedef1()
 
 async function movedef2(){
-    await def2.walkEast(800)
+    await def2.walkEast(2600)
     await def2.walkNorth(200)
     await def2.walkSouth(200)
-    await def2.walkWest(800)
+    await def2.walkWest(2600)
     await movedef2()
 }
 movedef2()
 
 async function movedef3(){
-    await def3.walkEast(800)
+    await def3.walkEast(2600)
     await def3.walkSouth(200)
     await def3.walkNorth(200)
-    await def3.walkWest(800)
+    await def3.walkWest(2600)
     await movedef3()
 }
 movedef3()
 
 async function movedef4(){
-    await def4.walkEast(800)
+    await def4.walkEast(2600)
     await def4.walkSouth(200)
     await def4.walkNorth(200)
-    await def4.walkWest(800)
+    await def4.walkWest(2600)
     await movedef4()
 }
 movedef4()
 
 async function moveblocker1(){
-    await blocker1.walkEast(800)
+    await blocker1.walkEast(2600)
     await blocker1.walkNorth(200)
     await blocker1.walkSouth(200)
-    await blocker1.walkWest(800)
+    await blocker1.walkWest(2600)
     await moveblocker1()
 }
 moveblocker1()
 
 async function moveblocker2(){
-    await blocker2.walkEast(800)
+    await blocker2.walkEast(2600)
     await blocker2.walkNorth(200)
     await blocker2.walkSouth(200)
-    await blocker2.walkWest(800)
+    await blocker2.walkWest(2600)
     await moveblocker2()
 }
 moveblocker2()
 
 async function moveblocker3(){
-    await blocker3.walkEast(800)
+    await blocker3.walkEast(2600)
     await blocker3.walkSouth(200)
     await blocker3.walkNorth(200)
-    await blocker3.walkWest(800)
+    await blocker3.walkWest(2600)
     await moveblocker3()
 }
 moveblocker3()
