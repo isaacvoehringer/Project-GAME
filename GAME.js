@@ -1,14 +1,15 @@
-// console.log('hi')
+// fundamental position function
 function move(element) {
     element.style.position = 'absolute'
     //track and react to player movement
-    let player1 = document.getElementById('player')
+let player1 = document.getElementById('player')
+
 function updateRectCoor(){
         var playerRect = player1.getBoundingClientRect();
 console.log(playerRect.top, playerRect.right, playerRect.bottom, playerRect.left);
 if (playerRect.left > 680) {touchdown()}
-if (playerRect.left < 95) {saftey()}
-if (playerRect.top > 636 || playerRect.top < 142){outOfBounds()}
+if (playerRect.left < 65) {saftey()}
+if (playerRect.top > 595 || playerRect.top < 100){outOfBounds()}
     }
     //posittioning and moving characters with tracking and react function attached to player
     function moveToCoordinates(left, bottom) {
@@ -278,7 +279,7 @@ function outOfBounds(){
 }
 
 
-
+//automation of non-playable characters
 
 async function movedef1(){
 
@@ -343,47 +344,22 @@ async function moveblocker3(){
     await moveblocker3()
 }
 moveblocker3()
-// function HitTest(Rectangle r1, Rectangle r2) returns boolean
-// {
-//     return ((r1.X + r1.Width >= r2.X) and (r1.X <= r2.X + r2.Width) and (r1.Y + r1.Height >= r2.Y) and (r1.Y <= r2.Y + r2.Height));
-// }
 
+//reset buttons to allow game to be replayed with user reloading browser manually
 
 let btn = document.getElementById('reset'); 
     btn.addEventListener("click", function() {
-        window.location.reload()
-//   let img = document.getElementsByClassName('win')[0];
-    //     img.style.visibility = 'hidden';
-    // let player1 = document.getElementById('player');
-    // player1.replaceWith(newPlayableCharacter(200,300));
-    ;
-   
+        window.location.reload();
+   })
 
-
-    
-
-    }
-    )
 let safetybtn = document.getElementById('safetybtn'); 
     safetybtn.addEventListener("click", function() {
         window.location.reload()
-    //     let img = document.getElementsByClassName('safety')[0];
-    //    img.style.visibility = 'hidden';
-
-    //    let player1 = document.getElementById('player')
-    //    player1.remove();
-    // newPlayableCharacter(200,300);
     })
  
-    let outbtn = document.getElementById('outbtn'); 
+let outbtn = document.getElementById('outbtn'); 
     outbtn.addEventListener("click", function() {
         window.location.reload()
-    //     let img = document.getElementsByClassName('out')[0];
-    //    img.style.visibility = 'hidden';
-
-    //    let player1 = document.getElementById('player')
-    //    player1.remove();
-    // newPlayableCharacter(200,300);
     })
     
 // prevent arrow keys from scrolling the window which disrupts game play

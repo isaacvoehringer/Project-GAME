@@ -29,4 +29,5 @@ improved image styling
 working on gameplay functionallity - prevent arrow keys from moving screen
 -improved boundaries
 -improved instructions
+-cleaning and organizing code
 
